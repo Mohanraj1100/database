@@ -13,7 +13,7 @@ public class Database {
         username = sc.next();
         System.out.println("Enter Password ");
         password = sc.next();
-        Storing obj1 = Storing.obj(database,username,password);
+        Storing obj1 = Storing.in(database,username,password);
         obj1.connection();
         obj1.terminate();
         sc.close();
