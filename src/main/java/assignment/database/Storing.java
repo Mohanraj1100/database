@@ -14,7 +14,7 @@ public class Storing
         this.password = password;
     }
 
-    public static Storing obj(String database,String username,String password) {
+    public static Storing in(String database,String username,String password) {
         return new Storing(database, username, password);
     }
 
