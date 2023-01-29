@@ -22,7 +22,6 @@ public class Storing
 
     {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(database, username, password);
             System.out.println("Connection established");
         } catch (Exception e) {
