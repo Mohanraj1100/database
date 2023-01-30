@@ -27,7 +27,7 @@ public class Storing
             con = DriverManager.getConnection(database, username, password);
             log.info("Connection established");
         } catch (Exception e) {
-            System.out.println(e);
+            log.info(e);
         }
     }
 
@@ -38,7 +38,7 @@ public class Storing
     }
     	catch(Exception e)
     	{
-    		System.out.println(e);
+    		log.info(e);
     	}
     }
     
