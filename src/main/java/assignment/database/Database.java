@@ -1,5 +1,7 @@
 package assignment.database;
 import java.util.*;
+import java.util.logging.*;
+
 public class Database {
 
 	public static void main(String[] args) {
@@ -7,11 +9,12 @@ public class Database {
         String username;
         String password;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter database name");
+	Logger log = Logger.getLogger("hi");
+        log.info("Enter database name");
         database = sc.next();
-        System.out.println("Enter Username");
+        log.info("Enter Username");
         username = sc.next();
-        System.out.println("Enter Password ");
+        log.info("Enter Password ");
         password = sc.next();
         Storing obj1 = Storing.in(database,username,password);
         obj1.connection();
