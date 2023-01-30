@@ -1,5 +1,6 @@
 package assignment.database;
 import java.sql.*;
+import java.util.logging.*;
 
 public class Storing 
 {
@@ -7,6 +8,7 @@ public class Storing
     String username;
     String password;
     Connection con;
+	Logger log = Logger.getLogger("hi");
 
     private Storing(String database, String username, String password) {
         this.database = database;
@@ -23,7 +25,7 @@ public class Storing
     {
         try {
             con = DriverManager.getConnection(database, username, password);
-            System.out.println("Connection established");
+            log.info("Connection established");
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -32,7 +34,7 @@ public class Storing
     void terminate() {
     	try {
         con.close();
-        System.out.println("Closed");
+        log.info("Closed");
     }
     	catch(Exception e)
     	{
